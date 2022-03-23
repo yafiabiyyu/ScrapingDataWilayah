@@ -199,7 +199,7 @@ class DataWilayah:
         self.getKec()
         self.getDes()
         self.createExcel()
-        # self.uploadToIPFS()
+        self.uploadToIPFS()
 
 
 test = DataWilayah()
