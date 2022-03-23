@@ -1,0 +1,8 @@
+env/
+.env
+desa/
+kabupaten/
+kecamatan/
+*.csv
+*.json
+*xlsx
