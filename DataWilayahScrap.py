@@ -217,6 +217,9 @@ class DataWilayah:
         df_kec.to_excel(write, sheet_name="Kecamatan", index=False)
         df_desa.to_excel(write, sheet_name="Desa", index=False)
         write.save()
+    
+    def createCSV(self):
+        pass
 
     def uploadToIPFS(self):
         w3_token = os.getenv("storage_token")
@@ -232,7 +235,11 @@ class DataWilayah:
         self.getKec()
         self.getDes()
         self.createExcel()
-        self.uploadToIPFS()
+        print("Jumlah Provinsi :  {}".format(len(self.provinsi["kode_bps"])))
+        print("Jumlah Kabupaten/Kota : {}".format(len(self.kabupaten["kode_bps"])))
+        print("Jumlah Kecamatan : {}".format(len(self.kecamatan["kode_bps"])))
+        print("Jumlah Desa : {}".format(len(self.desa["kode_bps"])))
+        # self.uploadToIPFS()
 
 
 test = DataWilayah()
